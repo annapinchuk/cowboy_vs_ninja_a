@@ -14,7 +14,7 @@ namespace ariel
         // attack 
         void attack(Team_interface *other){};
         // stillAlive() method that returns the number of team members who are still alive.
-        int stillAlive(){};
+        int stillAlive(){return 0;};
         // print() method that prints all the team members.
         void print(){}; // pure virtual method that prints all the team members is different for each team
         // add a new member to the team

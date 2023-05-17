@@ -9,10 +9,10 @@ namespace ariel
         Point(double x, double y) : _x(x), _y(y){}; // Constructor that initializes the Location object with the given x and y coordinates
         double distance(Point p){return 0;};                   // calculate the distance between two points
         // getters and setters
-        double getX();
-        double getY();
-        void setX(double x);
-        void setY(double y);
+        double getX(){return this->_x;};
+        double getY(){return this->_y;};
+        void setX(double x){};
+        void setY(double y){};
         // Method that prints the current location in the format (x, y)
         void print(){};
         // Method that takes a source Location, a target Location, and a distance value as inputs.
