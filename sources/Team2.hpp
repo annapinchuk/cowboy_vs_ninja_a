@@ -12,12 +12,12 @@ namespace ariel
         Team2(Character *leader) : Team_interface(leader){};
         ~Team2(){}; // destructor
         // attack 
-        void attack(Team_interface *other);
+        void attack(Team_interface *other){};
         // stillAlive() method that returns the number of team members who are still alive.
-        int stillAlive();
+        int stillAlive(){};
         // print() method that prints all the team members.
-        void print(); // pure virtual method that prints all the team members is different for each team
+        void print(){}; // pure virtual method that prints all the team members is different for each team
         // add a new member to the team
-        void add(Character *c);
+        void add(Character *c){};
     };
 }

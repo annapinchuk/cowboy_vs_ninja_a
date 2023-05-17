@@ -1,4 +1,5 @@
 #pragma once
+#include "Character.hpp"
 #include "Team_interface.hpp"
 namespace ariel
 {
@@ -17,11 +18,11 @@ namespace ariel
         vector<Ninja *> Ninjas;  
     public:
         // Constructor that initializes the Team object with the given leader and 2 empty vectors of cowboys and ninjas and add the leader to the matching group
-        Team(Character *leader);
+        Team(Character *leader) : Team_interface(leader), Cowboys(), Ninjas(){}
         // destructor frees the memory allocated to all members of the group
-        ~Team();
+        ~Team(){}
         // Adding add() takes a pointer to a cowboy or ninja, and adds it to the matching group.
-        void add(Character *c);
+        void add(Character *c){}
         // attack() receives a pointer to an enemy group.
         // Attacking the enemy group will be done in the following way:
         // First check if the leader of the attacking group is alive.
@@ -33,10 +34,10 @@ namespace ariel
         // Ninjas within 1 meter of the victim will kill the victim, and ninjas further away will advance towards the victim.
         // At each stage, if the victim is dead, a new victim will be chosen (which will be, again, the living enemy character closest to the leader of the attacking group).
         // If there are no living members in the attacking group or the enemy group the attack will end
-        void attack(Team *enemy);
+        void attack(Team *enemy){}
         // stillAlive() returns an integer number of group members remaining alive.
-        int stillAlive();
+        int stillAlive(){return 0;}
         // print() goes through all the characters in the group and prints their details
-        void print();
+        void print(){}
     };
 }

@@ -23,7 +23,7 @@ namespace ariel
         void setHealthpoints(int hit_points);
         bool isAlive();                // returns true if the character is alive, false otherwise more than 0 hit_points
         double distance(Character *c); // calculate the distance between two characters
-        void print();                  // prints the name of the character, the hp, and the point where the character is. If the character dies the hp will not be printed, and the character's name will appear in parentheses.
+        virtual string print() = 0;                  // prints the name of the character, the hp, and the point where the character is. If the character dies the hp will not be printed, and the character's name will appear in parentheses.
         // Before the name will appear a letter indicating the type of character: N for ninja and C for cowboy.
         void hit(int damage); // reduce the hit_points of the character by the given damage
     };

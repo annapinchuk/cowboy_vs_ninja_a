@@ -16,12 +16,12 @@ namespace ariel
         // Constructor that initializes the team with the given leader
         Team_interface(Character *leader) : leader(leader){};
         ~Team_interface(){}; // destructor
-        virtual void attack(Team_interface *other) = 0; // attack method that attacks the other team is different for each team
+        virtual void attack(Team_interface *other){}; // attack method that attacks the other team is different for each team
         // stillAlive() method that returns the number of team members who are still alive.
-        virtual int stillAlive() = 0;
+        virtual int stillAlive(){return 0;};
         // print() method that prints all the team members.
-        virtual void print() = 0; // pure virtual method that prints all the team members is different for each team
+        virtual void print(){}; // pure virtual method that prints all the team members is different for each team
         // add a new member to the team is different for each team
-        virtual void add(Character *c) = 0;
+        virtual void add(Character *c){};
     };
 }
